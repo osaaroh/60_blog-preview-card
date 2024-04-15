@@ -47,7 +47,7 @@ body{
 
 .card{
     background-color: var(--white);
-    padding: 1rem;
+    padding: 1.4rem;
     max-width: 384px;
     border-radius: 20px;
     font-family: var(--font-family);
