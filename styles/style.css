@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --yellow: hsl(47, 88%, 63%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --font-size-paragraph: 16px;
+    --font-family: "Figtree", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--yellow);
+    font-size: var(--font-size-paragraph);
+}
+
+@media screen and (max-width: 476px) {
+    body{
+        padding: 1rem;
+    }
+    body, .card{
+        font-size: 14px;
+    }
+}
+
+.card{
+    background-color: var(--white);
+    padding: 1rem;
+    max-width: 384px;
+    border-radius: 20px;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid var(--black);
+    box-shadow: 8px 8px var(--black);
+}
+
+.card .card_illustration {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card .tooltip{
+    font-size: 0.875rem;
+    padding: 4px 12px;
+    background: var(--yellow);
+    width: fit-content;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+.card .date{
+    font-size: 0.875rem;
+    margin-bottom: 1.625rem;
+}
+.card .title{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    font-weight: 800;
+    transition: all .3s;
+}
+.card .title:hover{
+    color: var(--yellow);
+    cursor: url(../assets/images/handcursor.svg), auto;
+}
+.card .text{
+    color: var(--grey);
+    line-height: 150%;
+}
+.card .profile{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.875rem;
+}
+.card .profile img{
+    width: 2rem;
+    height: 2rem;
+    max-width: 64px;
+    max-height: 64px;
+}
